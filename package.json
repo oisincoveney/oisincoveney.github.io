@@ -3,8 +3,8 @@
   "version": "0.3.3",
   "author": "Jonathan Alvarez",
   "description": "Snowpack CSA Template for tailwind, prettier and autopublish on GH pages",
-  "repository": "github:jonalvarezz/snowpack-template-tailwind",
-  "homepage": "https://jonalvarezz.github.io/snowpack-template-tailwind",
+  "repository": "github:oisincoveney/oisincoveney.github.io",
+  "homepage": "https://oisincoveney.github.io/oisincoveney.github.io",
   "keywords": [
     "snowpack",
     "csa-template"
