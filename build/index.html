@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://oisincoveney.github.io/oisincoveney.github.io/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Web site created using create-snowpack-app"
+    />
+    <!--
+      Snowpack will replace https://oisincoveney.github.io/oisincoveney.github.io/ with the value you have for `homepage` in `package.json`.
+      Make sure to update it with your GitHub Page URL. https://<your-username>.github.io/<your-repo-name>
+
+      More about config options:
+      - https://www.snowpack.dev/#config-files
+    -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://oisincoveney.github.io/oisincoveney.github.io/_dist_/index.css"
+    />
+
+    <title>Oisin Coveney</title>
+  </head>
+
+  <body
+    class="grid grid-cols-12 auto-rows-max auto-cols-max container lg:px-5 xs:px-2 mx-auto mt-10 h-screen"
+  >
+    <script>
+      function go(url) {
+        window.open(url, '_blank')
+      }
+    </script>
+    <div class="col-span-12 flex mb-8">
+      <img
+        src="img/oisin-sm.jpg"
+        class="card text-sm font-mono text-opacity-75 rounded-2xl mr-8 h-64 w-64 text-center align-middle justify-center"
+      />
+      <div
+        class="ml-7 text-7xl font-sans font-semibold mx-auto col-span-8 col-start-5 h-100 my-auto flex-1"
+      >
+        Oisin Coveney
+      </div>
+    </div>
+
+    <div class="col-span-12 sm-header">Who am I?</div>
+
+    <div class="col-span-12 sm-header mt-6 mb-5">
+      Check me out on the internet!
+    </div>
+    <div
+      onclick="go('https:\/\/www.github.com\/oisincoveney')"
+      target="_blank"
+      class="link card col-start-1 col-end-5"
+    >
+      <div id="github-img"><i class="fab fa-github"></i></div>
+      <div>Github</div>
+    </div>
+    <div
+      onclick="go('https:\/\/www.twitter.com\/OisinCoveney')"
+      class="link card col-start-5 col-end-9"
+    >
+      <div id="twitter-img"><i class="fab fa-twitter"></i></div>
+      <div>Twitter</div>
+    </div>
+    <div
+      onclick="go('https:\/\/www.linkedin.com\/in\/oisincoveney')"
+      class="link card text-center col-start-9 col-end-13"
+    >
+      <div id="linkedin-img"><i class="fab fa-linkedin"></i></div>
+      <div>LinkedIn</div>
+    </div>
+
+    <!-- <div class="col-span-12 sm-header mt-12 mb-6">Check out what I've worked on</div> -->
+
+    <div id="like_button_container"></div>
+
+    <div class="col-span-12 sm-header mt-12">Check out my resume!</div>
+    <div class="card col-span-12 grid auto-rows-auto">
+      <img
+        class="col-start-1 col-end-2 row-start-1 row-end-2 justify-self-center self-center"
+        src="img/golinkslogo.png"
+      />
+
+      <div class="grid grid-cols-2">
+        <div class="text-2xl font-extrabold col-span-2">GoLinks</div>
+        <div class="text-xl italic col-span-2">Software Developer Intern</div>
+        <div class="col-span-2">
+          <div class="flex flex-row taglist">
+            <div>Javascript</div>
+            <div>React</div>
+            <div>PHP</div>
+            <div></div>
+          </div>
+        </div>
+        <div class="ml-6 col-span-2">
+          <ul class="list-disc">
+            <li>
+              Worked with backend developers create the front-end of the GoLinks
+              Apps page
+            </li>
+            <li>b</li>
+            <li>c</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex flex-row col-start-1 col-end-3 flex-wrap">
+        <div class="h-64 w-64 text-center">
+          <img
+            id="golinksapps-img"
+            class="mx-auto h-5/6 overflow-clip rounded-lg"
+            src="img/golinksapps.png"
+          />
+          <div class="h-1/6">GoLinks Apps Page</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more scripts here -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://oisincoveney.github.io/oisincoveney.github.io/_dist_/like_button.js"></script>
+  </body>
+</html>
