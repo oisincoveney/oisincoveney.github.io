@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '12.x'
 
-      - run: npm
+      - run: npm version
 
       - run: npm build
 
