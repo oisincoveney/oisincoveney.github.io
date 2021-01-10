@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <!-- <meta http-equiv="Content-Security-Policy" content="default-src https:"> -->
+  <meta http-equiv="Content-Security-Policy" content="default-src https:">
   <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Web site created using create-snowpack-app" />
@@ -94,6 +94,9 @@ showcase of different applications for go links (golinks.io/apps.php)
       </div>
     </div>
 
+    <div id="like_button_container"></div>
+
+
     <div class="card resumegrid">
       <img class="col-start-1 col-end-2 row-start-1 row-end-2 justify-self-center self-center"
         src="%PUBLIC_URL%/img/golinkslogo.png" />
@@ -167,14 +170,16 @@ showcase of different applications for go links (golinks.io/apps.php)
   </div>
 
   <!-- Add more scripts here -->
-  <!-- <script
-      src="https://unpkg.com/react@17/umd/react.development.js"
+  <script
+      src="https://unpkg.com/react@17/umd/react.production.min.js"
       crossorigin
     ></script>
     <script
-      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
       crossorigin
-    ></script> -->
+    ></script>
+    <script src="%PUBLIC_URL%/_dist_/like_button.js"></script>
+
 </body>
 
 </html>
