@@ -1,9 +1,9 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('public/font-awesome/css/all.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .card {
   @apply border border-gray-400 border-opacity-20 shadow-lg;
@@ -31,6 +31,12 @@
 
 .taglist > div {
   @apply border border-gray-800 text-center rounded-full mx-2 my-3 px-2 py-1;
+}
+
+.resumegrid {
+  display: grid;
+  grid-template: repeat(2, 1fr) / 20vw 1fr;
+  @apply rounded-lg px-10 gap-10;
 }
 
 #twitter-img {
