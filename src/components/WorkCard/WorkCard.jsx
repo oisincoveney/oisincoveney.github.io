@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styles from "./WorkCard.module.css"
 
 
 const WorkCard = ({ data, logo }) => {
@@ -16,10 +17,10 @@ const WorkCard = ({ data, logo }) => {
 
 
 
-  return (<div className="WorkCardWrapper card my-6 p-8 flex flex-row gap-x-10">
+  return (<div className={styles.WorkCardWrapper + " card"}>
     {logo && <div>{logo}</div>}
     <div className="w-1/3">
-      <div className="text-2xl font-bold align-middle">
+      <div className={styles.Company}>
         {company}
         <a href={website} target="_blank" className="text-blue-600">
           <FontAwesomeIcon className="text-blue-600 text-sm pb-1" icon={faLink}></FontAwesomeIcon>

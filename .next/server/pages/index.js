@@ -115,7 +115,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_Home_module_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_Home_module_css__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _public_Oisin_Coveney_resume__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../public/Oisin_Coveney.resume */ "./public/Oisin_Coveney.resume.js");
 
-var _jsxFileName = "/home/oisin/projects/oisincoveney.github.io/pages/index.js";
+var _jsxFileName = "/home/oisin/projects/next-res/pages/index.js";
 
 
 
@@ -379,7 +379,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "@fortawesome/react-fontawesome");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__);
 
-var _jsxFileName = "/home/oisin/projects/oisincoveney.github.io/src/components/WorkCard/WorkCard.jsx";
+var _jsxFileName = "/home/oisin/projects/next-res/src/components/WorkCard/WorkCard.jsx";
 
 
 
@@ -517,7 +517,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "prop-types");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 
-var _jsxFileName = "/home/oisin/projects/oisincoveney.github.io/src/sections/EducationSection/EducationSection.jsx";
+var _jsxFileName = "/home/oisin/projects/next-res/src/sections/EducationSection/EducationSection.jsx";
 
  //import { Test } from './EducationSection.styles';
 
@@ -560,7 +560,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "@fortawesome/react-fontawesome");
 /* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5__);
 
-var _jsxFileName = "/home/oisin/projects/oisincoveney.github.io/src/sections/LinkSection/LinkSection.jsx";
+var _jsxFileName = "/home/oisin/projects/next-res/src/sections/LinkSection/LinkSection.jsx";
 
 
 
@@ -693,7 +693,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_WorkCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/WorkCard */ "./src/components/WorkCard/index.js");
 
 
-var _jsxFileName = "/home/oisin/projects/oisincoveney.github.io/src/sections/ResumeSection/ResumeSection.jsx";
+var _jsxFileName = "/home/oisin/projects/next-res/src/sections/ResumeSection/ResumeSection.jsx";
 
 
  //import { Test } from './ResumeSection.styles';
