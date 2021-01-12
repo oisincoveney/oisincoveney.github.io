@@ -22,83 +22,66 @@ export let data = {
   "work": [
     {
       "company": "GoLinks",
-      "endDate": "2020-08-31",
-      "highlights": [],
+      "endDate": "2020-08-02",
+      "highlights": [
+        "Collaborated with backend engineering and design teams to create the GoLinks Apps page, highlighting the specific usecases that GoLinks can handle within a variety of different web applications",
+        "Created the first draft of the GoLinks JIRA plugin, which will handle link creation for JIRA issues and sprint boards",
+        "Delivered a tech talk on React Hooks, and participated in daily standups, retrospectives, and company-wide meetings"
+      ],
       "position": "Software Developer Intern",
       "startDate": "2020-06-30",
-      "summary": "- Collaborated with backend engineering and design teams to create the GoLinks Apps page, highlighting the specific usecases that GoLinks can handle within a variety of different web applications \n-  Created the first draft of the GoLinks JIRA plugin, which will handle link creation for JIRA issues and sprint boards",
-      "website": "https://www.linkedin.com/company/golinks/"
+      "website": "https://www.golinks.io"
     },
     {
       "company": "Clearwater Analytics",
       "endDate": "2019-08-31",
-      "highlights": [],
+      "highlights": [
+        "Worked in an Agile environment with a group of colleagues to architect and develop internal tools.",
+        "Developed a full stack solution for ordered regression testing using Bootstrap, Angular, Java Tomcat, and Microsoft SQL Server, now used to test patches in internal and client-facing applications.",
+        "Designed front-end UI using Angular, Bootstrap, and CSS for an internal Kubernetes deployment tool for Clearwater QA."],
       "position": "Software Developer Intern",
       "startDate": "2019-05-31",
-      "summary": "- Worked in an Agile environment with a group of colleagues to architect and develop internal tools.\n- Developed a full stack solution for ordered regression testing using Bootstrap, Angular, Java Tomcat, and Microsoft SQL Server, now used to test patches in internal and client-facing applications.\n- Designed front-end UI using Angular, Bootstrap, and CSS for an internal Kubernetes deployment tool for Clearwater QA.",
-      "website": "https://www.linkedin.com/company/clearwateranalytics/"
+      "website": "https://www.clearwateranalytics.com"
     },
     {
       "company": "Citi",
       "endDate": "2018-08-31",
-      "highlights": [],
+      "highlights": [
+        "Optimized package delivery to over 25,000 Citi developers worldwide by performing data analysis on repository package data within production Artifactory instances.",
+        "Determined inefficiencies of repository storage usage through Python scripting and identified unusual usage trends with Splunk dashboards."
+      ],
       "position": "CitiDeveloper Enterprise Artifact Repository Engineer Intern",
       "startDate": "2018-06-30",
-      "summary": "As a part of the Enterprise DevOps team, I found ways to optimize package delivery to over 25,000 Citi developers worldwide by performing data analysis on repository package data within production Artifactory instances. I also helped increase internal repository speed by identifying unusual usage trends with Splunk. I was also able to improve insight and determine inefficiencies of repository storage usage through Python scripting.",
-      "website": "https://www.linkedin.com/company/citi/"
-    },
-    {
-      "company": "Southern Methodist University",
-      "endDate": "2017-12-31",
-      "highlights": [],
-      "position": "C++ Data Structures & Intro to Java Teaching Assistant",
-      "startDate": "2017-08-31",
-      "summary": "As a TA for two different courses at Southern Methodist University (CSE 2341: Data Structures in C++, and CSE 1341: Creative Computing I), I administered projects and tests to over 100 students among four lab sections, improved student outcomes by delivering data-intensive reports to students and professors, and delivered lectures on basic and advanced computer science concepts, including data structures, Github usage, bash, and test-driven development.",
-      "website": "https://www.linkedin.com/school/smudallas/"
+      "website": "https://www.citi.com"
     },
     {
       "company": "Nuxeo",
       "endDate": "2017-08-31",
-      "highlights": [],
+      "highlights": [
+        "Automated picture tagging for Nuxeo Platform with a backend Java solution with API calls to Clarifai.",
+        "Launched several customized Nuxeo dashboards with Nuxeo University with HTML5 and CSS3."
+      ],
       "position": "Summer Developer Intern",
       "startDate": "2017-05-31",
-      "summary": "At Nuxeo, I automated picture tagging for Nuxeo Platform by developing a Java plugin for Clarifai that clients can use to simplify the process of adding large amounts of data to their instance of their platform. I also launched several customized Nuxeo dashboards with Nuxeo University using Javascript and HTML.\n\nCode for the plugin can be seen here: https://github.com/oisincoveney",
       "website": "https://www.linkedin.com/company/nuxeo/"
-    },
-    {
-      "company": "De Anza Force SC",
-      "endDate": "2016-08-31",
-      "highlights": [],
-      "position": "Assistant Coach",
-      "startDate": "2016-07-31",
-      "summary": "With the Force, I helped coach two different girls soccer teams with Head Coach Iman Siadat. I helped set up and run drills, and talked to parents about various concerns about the team and the club. As an assistant coach, I was able to act as a liaison between players and the coach, and was able to gain insight about each player that we could use to elevate each team's strengths.",
-      "website": ""
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "Kicks Against Cancer",
-      "position": "Senior Director (2015-2016), Fundraiser Assistant (2012-2013)",
-      "website": "",
-      "startDate": "2012-11-30",
-      "endDate": "2016-01-31",
-      "summary": null,
-      "highlights": []
     }
   ],
   "education": [
     {
-      "institution": "Southern Methodist University",
-      "area": "Majoring in Computer Science and Economics, with Honors in the Liberal Arts",
-      "studyType": "Bachelor of Science (B.S.)",
-      "startDate": "2016-12-31",
-      "endDate": "2017-12-31",
-      "gpa": "3.93 GPA",
+      "institution": "Dublin City University",
+      "area": "Computing, Concentration in Data Analytics ",
+      "studyType": "Master of Science - MS",
+      "startDate": "2020-09-24",
+      "endDate": "2021-07-31",
       "courses": [
-        "KNW 2300 - Introduction to Engineering Design",
-        "ECO 5350 - Econometrics",
-        "CSE 2341 - C++ Data Structures"
-      ]
+        'Professional & Research Practice',
+        'Statistical Data Analysis',
+        'Cloud Technologies',
+        'Data Management and Visualisation',
+        'Mathematical Methods/Computational Science',
+        'Concurrent Programming',
+        'Data Analytics and Data Mining',
+        'Machine Learning']
     },
     {
       "institution": "San Jose State University",
@@ -107,25 +90,27 @@ export let data = {
       "startDate": "2018-12-31",
       "endDate": "2020-12-31",
       "gpa": "3.93",
-      "courses": []
+      "courses": [
+        "Machine Learning with Cybersecurity Applications",
+        "Object-Oriented Design",
+        "Software Engineering",
+        "Numerical Analysis and Scientific Computing",
+        "Advanced C++ Programming"
+      ]
     },
     {
-      "institution": "De Anza College",
-      "area": "",
-      "studyType": "",
-      "startDate": "2018-12-31",
-      "endDate": "",
-      "gpa": "",
-      "courses": []
-    },
-    {
-      "institution": "Dublin City University",
-      "area": "Computing, Concentration in Data Analytics ",
-      "studyType": "Master of Science - MS",
-      "startDate": "2020-12-31",
-      "endDate": "2021-12-31",
-      "gpa": "",
-      "courses": []
+      "institution": "Southern Methodist University",
+      "area": "Majoring in Computer Science and Economics, with Honors in the Liberal Arts",
+      "studyType": "Bachelor of Science (B.S.)",
+      "startDate": "2016-12-31",
+      "endDate": "2017-12-31",
+      "gpa": "3.93 GPA",
+      "courses": [
+        "Econometrics",
+        "C++ Data Structures",
+        "Creative Computing in C++",
+        "Programming Paradigms"
+      ]
     },
     {
       "institution": "The Harker School",
@@ -133,27 +118,18 @@ export let data = {
       "studyType": "High School Diploma",
       "startDate": "2012-12-31",
       "endDate": "2016-12-31",
-      "gpa": "GPA: 3.85",
+      "gpa": "3.85",
       "courses": [
-        "null - Advanced Topics in Computer Science: Expert Systems"
+        "Advanced Topics in CS: Expert Systems"
       ]
     },
     {
       "institution": "University College Dublin",
       "area": "Computer Science",
       "studyType": "Exchange Student",
-      "startDate": "2019-12-31",
-      "endDate": "2019-12-31",
-      "gpa": "",
-      "courses": []
-    }
-  ],
-  "awards": [
-    {
-      "title": "Honor Roll with Distinction",
-      "date": "2017-05-31",
-      "awarder": "Southern Methodist University",
-      "summary": "Top 10% of School GPA for Spring 2017 with a cumulative GPA of 3.91"
+      "startDate": "2019-01-07",
+      "endDate": "2019-06-15",
+      "courses": ["Foundations of Computing", "Data Science in Python"]
     }
   ],
   "publications": [],
