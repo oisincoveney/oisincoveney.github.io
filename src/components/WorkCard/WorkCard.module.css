@@ -1,7 +1,7 @@
 /* your css code */
 
 .WorkCardWrapper {
-    @apply card my-6 p-8 flex flex-row gap-x-10;
+    @apply my-6 p-8 flex flex-row gap-x-10;
 }
 
 .Company {

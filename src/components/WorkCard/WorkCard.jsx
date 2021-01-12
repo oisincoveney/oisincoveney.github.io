@@ -17,7 +17,7 @@ const WorkCard = ({ data, logo }) => {
 
 
 
-  return (<div className={styles.WorkCardWrapper}>
+  return (<div className={styles.WorkCardWrapper + " card"}>
     {logo && <div>{logo}</div>}
     <div className="w-1/3">
       <div className={styles.Company}>
