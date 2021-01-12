@@ -18,3 +18,16 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+.card {
+  @apply border border-gray-400 border-opacity-20 shadow-lg;
+}
+/* 
+.sm-header {
+  @apply text-center text-4xl font-medium opacity-80 text-gray-900;
+}
+
+.taglist > div {
+  @apply border border-gray-800 text-center rounded-full mx-2 my-3 px-2 py-1;
+} */
