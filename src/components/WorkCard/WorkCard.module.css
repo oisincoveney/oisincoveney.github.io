@@ -1,0 +1,9 @@
+/* your css code */
+
+.WorkCardWrapper {
+    @apply card my-6 p-8 flex flex-row gap-x-10;
+}
+
+.Company {
+    @apply text-2xl font-bold align-middle;
+}
