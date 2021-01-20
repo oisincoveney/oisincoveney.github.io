@@ -6,9 +6,9 @@ import WorkCard from '../../components/WorkCard';
 const ResumeSection = ({ data }) => (
   <div className="ResumeSectionWrapper">
     {Object.values(data).map(v =>
-      <>
-        <WorkCard data={v}></WorkCard>
-      </>
+      <div key={`outer-${v.company.replace(/\s+/g, '')}`}>
+        <WorkCard key={v.company.replace(/\s+/g, '')} data={v}></WorkCard>
+      </div>
     )}
   </div>
 );

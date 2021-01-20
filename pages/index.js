@@ -8,7 +8,7 @@ import { data } from '../public/Oisin_Coveney.resume'
 import IdentitySection from '../src/sections/IdentitySection/IdentitySection'
 
 export default function Home() {
-  return <div className="mx-20 my-2 mt-12">
+  return <div className="my-2 mx-80 mt-12">
     <header className="mb-10 flex flex-row items-center justify-center">
       <img className="rounded-full h-64 w-64 mr-5" src="img/oisin-sm.jpg" />
       <div className="text-6xl font-bold ml-5">

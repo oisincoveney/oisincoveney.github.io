@@ -30,7 +30,7 @@ const WorkCard = ({ data, logo }) => {
 
       <div>{parseDate(startDate)} to {parseDate(endDate)}</div>
     </div>
-    <ul className="w-2/3 col-start-2 col-end-3 row-start-1 row-end-4 list-disc">{highlights.map(v => <li>{v}</li>)}</ul>
+    <ul className="w-2/3 col-start-2 col-end-3 row-start-1 row-end-4 list-disc">{highlights.map(v => <li key={v}>{v}</li>)}</ul>
   </div>)
 };
 
