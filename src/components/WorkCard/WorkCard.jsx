@@ -19,7 +19,7 @@ const WorkCard = ({ data, logo }) => {
 
   return (<div className={styles.WorkCardWrapper + " card"}>
     {logo && <div>{logo}</div>}
-    <div className="w-1/3">
+    <div className="w-1/4">
       <div className={styles.Company}>
         {company}
         <a href={website} target="_blank" className="text-blue-600">

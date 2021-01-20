@@ -1,12 +1,10 @@
-.Wrapper {
-    @apply h-24;
-}
+.Wrapper {}
 
 .AdjHidden {
     @apply transition-opacity;
 }
 .AdjEnter {
-    @apply transition-opacity opacity-0 h-0 block duration-700;
+    @apply transition-opacity opacity-0 block duration-700;
 }
 .AdjActive {
     @apply opacity-100 transition-opacity duration-1000;

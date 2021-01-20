@@ -6,7 +6,7 @@
 }
 
 .Button {
-    @apply border border-gray-400 px-7 text-center rounded-lg mx-2 py-7 hover:transform hover:-translate-y-1 hover:shadow-2xl hover:transition-all cursor-pointer;
+    @apply border border-gray-200 px-7 text-center rounded-lg mx-2 py-7 hover:transform hover:-translate-y-1 hover:shadow-2xl hover:transition-all cursor-pointer;
 }
 
 .IconFormat {

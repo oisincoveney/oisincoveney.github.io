@@ -7,24 +7,18 @@ import { CSSTransition } from 'react-transition-group'
 
 
 const adjectives = [
-  "public transportation supporter",
+  "a public transportation supporter",
   "passionate about helping people",
-  "soccer player (when my knees aren't broken)",
-  "IPA enthusiast",
-  "traveller of unknown places",
-  "owner of 2 huskies",
-  "front-end engineer",
-  "data science master's student",
-  "Avid watcher of British panel shows",
-  "Loves doing multiplication tables for fun",
+  "a soccer player (when my knees aren't broken)",
+  "an IPA enthusiast",
+  "an urban backpacker",
+  "the owner of two huskies",
+  "a front-end engineer",
+  "a data science master's student",
+  "an avid watcher of British panel shows",
+  "a multiplication table fiend",
   "Irish, Filipino, and American"
 ]
-
-const Adjective = ({ desc, display }) => (
-  <div className={display ? styles.AdjActive : styles.Adjective}>
-    {desc}
-  </div>
-)
 
 const States = Object.freeze({
   HIDDEN: 0,
@@ -33,19 +27,11 @@ const States = Object.freeze({
   MID: 3
 })
 
-const AdjectiveCloud = (props) => {
+const AdjectiveCloud = ({textStyling}) => {
 
   const [adjIdx, setAdjIdx] = useState(0);
   const [animateState, setAnimateState] = useState(States.HIDDEN)
   const [adjective, setAdjective] = useState(null)
-
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setAdjIdx((adjIdx + 1) % adjectives.length)
-  //   }, 3000)
-  //   return () => clearInterval(interval)
-  // }, [adjIdx])
 
   useEffect(() => {
 
@@ -84,7 +70,7 @@ const AdjectiveCloud = (props) => {
     return () => { }
   }, [animateState])
 
-  return <div className={styles.Wrapper}>
+  return <div className={styles.Wrapper + ' ' + textStyling}>
     {adjective}
   </div>
 };
