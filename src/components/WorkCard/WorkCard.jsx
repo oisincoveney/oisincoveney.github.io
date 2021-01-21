@@ -1,36 +1,51 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { faLink } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from "./WorkCard.module.css"
+import { format } from 'date-fns'
+
+const SkillCard = ({ word }) => {
+  return <div className="popup-transition border border-gray-200 rounded-full px-5 py-2 mx-1 my-1 font-semibold text-lg hover:shadow-lg">{word}</div>
+}
 
 
-const WorkCard = ({ data, logo }) => {
+const WorkCard = ({ data }) => {
 
-  const { company, startDate, endDate, highlights, position, summary, website } = data
-
-
-  const parseDate = (date) => {
-    const m = new Date(date)
-    return `${m.toLocaleString('default', {month: "long"})} ${m.getFullYear()}`
-  }
-
-
+  const { company, startDate, endDate, highlights, position, skills, location } = data
 
   return (<div className={styles.WorkCardWrapper + " card"}>
-    {logo && <div>{logo}</div>}
-    <div className="w-1/4">
-      <div className={styles.Company}>
-        {company}
-        <a href={website} target="_blank" className="text-blue-600">
-          <FontAwesomeIcon className="text-blue-600 text-sm pb-1" icon={faLink}></FontAwesomeIcon>
-        </a>
+    <div className="flex flex-row">
+      <div className="col-start-1 col-end-2 flex-1">
+        <div className="text-4xl font-black mb-2">{company}</div>
+        <div className="text-2xl font-normal">{position}</div>
       </div>
-      <div className="italic text">{position}</div>
-
-      <div>{parseDate(startDate)} to {parseDate(endDate)}</div>
+      {/* <div className="flex flex-col mr-10 items-end">
+        <div className="justify-self-end">
+          <span>from </span>{format(new Date(startDate), 'MMMM yyyy')}
+        </div>
+        <div className="justify-self-end">
+          <span>to </span>{format(new Date(endDate), 'MMMM yyyy')}
+        </div>
+      </div> */}
     </div>
-    <ul className="w-2/3 col-start-2 col-end-3 row-start-1 row-end-4 list-disc">{highlights.map(v => <li key={v}>{v}</li>)}</ul>
+    {/* <hr className="mt-6"></hr> */}
+    <div className="flex flex-row my-4 justify-start flex-wrap ">
+      {skills && skills.map(s => <SkillCard word={s}></SkillCard>)}
+    </div>
+    {/* <hr className="mb-6"></hr> */}
+    <div className="col-span-2">
+      <ul className={`${styles.WorkHighlight} list-disc`}>
+        {highlights.map(h => {
+          return <li className={`text-xl my-2`}>{h + ((h.slice(-1) === '.') ? '' : '.')}</li>
+        })}
+      </ul>
+    </div>
+    <hr className="my-5"></hr>
+    <div className="flex flex-row justify-between gap-x-2 italic">
+      <div className="self-start font-medium">{location}</div>
+      <div className="self-end text-right font-medium">
+        <span>from </span>{format(new Date(startDate), 'MMMM yyyy')} <span>to </span>{format(new Date(endDate), 'MMMM yyyy')}
+      </div>
+    </div>
+
   </div>)
 };
 

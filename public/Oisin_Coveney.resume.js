@@ -30,18 +30,22 @@ export let data = {
       ],
       "position": "Software Developer Intern",
       "startDate": "2020-06-30",
-      "website": "https://www.golinks.io"
+      "website": "https://www.golinks.io",
+      "skills": ["Javascript", "React", "PHP", "JIRA", "Webpack"],
+      "location": "San Jose, CA, USA"
     },
     {
       "company": "Clearwater Analytics",
-      "endDate": "2019-08-31",
+      "endDate": "2019-08-02",
       "highlights": [
         "Worked in an Agile environment with a group of colleagues to architect and develop internal tools.",
         "Developed a full stack solution for ordered regression testing using Bootstrap, Angular, Java Tomcat, and Microsoft SQL Server, now used to test patches in internal and client-facing applications.",
         "Designed front-end UI using Angular, Bootstrap, and CSS for an internal Kubernetes deployment tool for Clearwater QA."],
-      "position": "Software Developer Intern",
-      "startDate": "2019-05-31",
-      "website": "https://www.clearwateranalytics.com"
+      "position": "Full Stack Developer Intern",
+      "startDate": "2019-05-28",
+      "website": "https://www.clearwateranalytics.com",
+      "skills": ["Javascript", "Angular", "Microsoft SQL Server", "Java", "Tomcat", "SASS"],
+      "location": "Boise, ID, USA"
     },
     {
       "company": "Citi",
@@ -50,9 +54,11 @@ export let data = {
         "Optimized package delivery to over 25,000 Citi developers worldwide by performing data analysis on repository package data within production Artifactory instances.",
         "Determined inefficiencies of repository storage usage through Python scripting and identified unusual usage trends with Splunk dashboards."
       ],
-      "position": "CitiDeveloper Enterprise Artifact Repository Engineer Intern",
+      "position": "Enterprise Artifact Repository Intern",
       "startDate": "2018-06-30",
-      "website": "https://www.citi.com"
+      "website": "https://www.citi.com",
+      "skills": ["Python", "Splunk", "Regex", "Artifactory", "REST API"],
+      "location": "Dallas, TX, USA"
     },
     {
       "company": "Nuxeo",
@@ -61,9 +67,11 @@ export let data = {
         "Automated picture tagging for Nuxeo Platform with a backend Java solution with API calls to Clarifai.",
         "Launched several customized Nuxeo dashboards with Nuxeo University with HTML5 and CSS3."
       ],
-      "position": "Summer Developer Intern",
+      "position": "Software Developer Intern",
       "startDate": "2017-05-31",
-      "website": "https://www.linkedin.com/company/nuxeo/"
+      "website": "https://www.linkedin.com/company/nuxeo/",
+      "skills": ["Nuxeo Platform", "Java", "REST API", "Clarifai", "HTML", "CSS"],
+      "location": "Los Gatos, CA"
     }
   ],
   "education": [

@@ -1,7 +1,12 @@
 /* your css code */
 
 .WorkCardWrapper {
-    @apply my-6 p-8 flex flex-row gap-x-10;
+    @apply my-6 p-8 flex flex-col;
+    grid-template-columns: 1fr 10em;
+}
+
+.WorkHighlight {
+    @apply px-10;
 }
 
 .Company {
