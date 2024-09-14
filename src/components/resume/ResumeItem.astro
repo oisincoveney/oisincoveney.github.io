@@ -1,0 +1,66 @@
+---
+import { Icon } from "astro-icon/components";
+
+export type Props = {
+  title?: string;
+  description: string[];
+  link?: string;
+  compact?: boolean;
+};
+
+const { title, description, link, compact = false } = Astro.props;
+
+function capitalizeFirstLetter(str: string) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+const urlName = link
+  ? capitalizeFirstLetter(
+      new URL(link).hostname.split(".").slice(-2, -1).join("."),
+    )
+  : undefined;
+---
+
+<div class="my-4">
+  {
+    compact ? (
+      <div>
+        <ul class="ml-4 list-disc">
+          {" "}
+          {description.map((d) => (
+            <li class="my-1 text-sm">
+              <span class="font-bold">{title}</span>: {d}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ) : !title ? (
+      <ul class="ml-4 list-disc">
+        {description.map((d) => (
+          <li class="my-1 text-sm">{d}</li>
+        ))}
+      </ul>
+    ) : (
+      <>
+        <div class="flex flex-row flex-wrap items-center justify-between border-b-2 border-button/20 text-lg">
+          <h4 class="font-bold">{title}</h4>
+          {link && (
+            <a
+              href={link}
+              class="my-2 flex cursor-pointer flex-row items-center gap-1 rounded-lg text-[0.95rem] transition ease-in-out hover:underline"
+              target="_blank"
+            >
+              View on {urlName} <Icon is:inline name="carbon:launch" />
+            </a>
+          )}
+        </div>
+
+        <ul class="ml-4 list-disc">
+          {description.map((d) => (
+            <li class="my-1 text-sm">{d}</li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+</div>

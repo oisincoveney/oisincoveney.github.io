@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon/components";
+import ResumeFullSection from "../components/resume/ResumeFullSection.astro";
+import ResumeNav from "../components/resume/ResumeNav.astro";
+import ResumeSection from "../components/resume/ResumeSection.astro";
+import TechnologyKey from "../components/tech/TechnologyKey.astro";
+import { RESUME, type ResumeKey } from "../data/resume";
+import Subpage from "../layouts/Subpage.astro";
+---
+
+<Subpage title="Resume">
+  <div class="sticky top-0 z-50 bg-nav-secondary/90 text-light p-4">
+    <ResumeNav values={Object.keys(RESUME) as ResumeKey[]} />
+  </div>
+  <section class="mx-auto w-[min(100%,60rem)] p-4">
+    <div class="my-4">
+      <TechnologyKey />
+    </div>
+    <div id="resume" class="flex flex-col gap-10">
+      {
+        Object.entries(RESUME).map(([sectionName, data]) => (
+          <ResumeFullSection sectionName={sectionName} data={data} />
+        ))
+      }
+    </div>
+  </section>
+  <div class="hover:scale-110 transition absolute bottom-6 right-12 bg-button px-4 py-2 flex flex-row gap-2 items-center rounded-xl ">
+    <Icon name="carbon:document-download" class=" text-text-button" />
+    <a target="_blank" href="public/resume.pdf" class="text-md bg-button text-text-button font-black">Download PDF</a>
+  </div>
+</Subpage>

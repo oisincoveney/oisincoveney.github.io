@@ -1,0 +1,23 @@
+---
+import { Icon } from "astro-icon/components";
+
+type Props = {
+  icon: string;
+  title?: string;
+} & astroHTML.JSX.AnchorHTMLAttributes;
+
+const { icon, title, href, ...anchorProps } = Astro.props;
+---
+
+<a
+  href={href}
+  class="group relative flex h-12 w-12 flex-col items-center justify-center rounded-lg border-4 border-transparent transition duration-300 ease-in-out hover:scale-110 hover:border-4 hover:border-button"
+  {...anchorProps}
+>
+  <Icon name={icon} size="1.5rem" />
+  <span
+    class="absolute top-[3rem] rounded-lg bg-primary-dark px-2 py-1 text-sm font-bold opacity-0 transition-opacity group-hover:opacity-100"
+  >
+    {title}
+  </span>
+</a>

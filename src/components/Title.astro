@@ -1,0 +1,32 @@
+---
+import { NAME } from "../data/constants";
+---
+
+<div id="titleElement" class="cursor-normal">
+  <h2 id="name" class="text-5xl font-black block">{NAME}</h2>
+  <h2 id="pronunciation" class="hidden text-5xl font-normal italic">
+    (o-sheen cove-en-ey)
+  </h2>
+</div>
+
+<script>
+  const classes = ["block", "hidden"];
+
+  const swapElementClasses = (elem: Element | null) => {
+    if (elem) {
+      // this is bad and I should feel bad
+      elem.classList.replace(classes[0], classes[1]) ||
+        elem.classList.replace(classes[1], classes[0]);
+    }
+  };
+
+  const swap = () => {
+    swapElementClasses(document.querySelector("#pronunciation"));
+    swapElementClasses(document.querySelector("#name"));
+  };
+
+  const titleElement = document.querySelector("#titleElement");
+
+  titleElement?.addEventListener("mouseover", swap);
+  titleElement?.addEventListener("mouseout", swap);
+</script>

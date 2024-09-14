@@ -1,0 +1,83 @@
+---
+import type { ResumeKey } from "../../data/resume";
+
+type Props = {
+  values: ResumeKey[];
+};
+
+const { values } = Astro.props;
+---
+
+<nav id="resumeNav" class="flex flex-row items-center justify-center gap-4">
+  {
+    values.map((key: ResumeKey) => (
+      <a
+        href={`#${key}`}
+        data-key={key}
+        class="resume-nav-link rounded-2xl px-3 py-1 capitalize"
+      >
+        {key}
+      </a>
+    ))
+  }
+</nav>
+
+<script>
+  const classes = ["font-bold", "bg-button", "text-dark"];
+
+  let lock = false;
+
+  window.addEventListener("hashchange", () => {
+    lock = true;
+    document.querySelectorAll("[data-key]").forEach((elem) => {
+      if (elem.getAttribute("data-key") === window.location.hash.slice(1)) {
+        classes.forEach((c) => elem.classList.add(c));
+      } else {
+        classes.forEach((c) => elem.classList.remove(c));
+      }
+    });
+    setTimeout(() => {
+      lock = false
+    }, 0);
+  });
+
+  function checkVisible(elm: Element) {
+    var rect = elm.getBoundingClientRect();
+    var viewHeight = Math.max(
+      document.documentElement.clientHeight,
+      window.innerHeight,
+    );
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    if (lock) {
+      return;
+    }
+
+    const intersecting = entries.filter((e) => e.isIntersecting);
+    let key: string | null | undefined;
+    if (intersecting.length === 0) {
+      const visibleElements = Array.from(
+        document.querySelectorAll("[data-section-name]"),
+      ).filter(checkVisible);
+      key = visibleElements.at(-1)?.getAttribute("data-section-name");
+    } else {
+      key = intersecting.at(-1)?.target.getAttribute("data-section-name");
+    }
+
+    if (key) {
+      document.querySelectorAll("[data-key]").forEach((elem) => {
+        if (elem.getAttribute("data-key") === key) {
+          classes.forEach((c) => elem.classList.add(c));
+        } else {
+          classes.forEach((c) => elem.classList.remove(c));
+        }
+      });
+    }
+  });
+
+  document
+    .querySelectorAll("[data-section-name]")
+    .forEach((e) => observer.observe(e));
+</script>

@@ -1,0 +1,16 @@
+---
+import { techMap } from "./tech.ts";
+---
+
+<div
+  class="flex flex-row flex-wrap items-center justify-center gap-x-5 gap-y-1"
+>
+  {
+    techMap.map(([_, { type, color }]) => (
+      <div class="flex flex-row items-center gap-1 text-sm">
+        <div class={`${color} h-4 w-4 rounded-2xl`} />
+        {type}
+      </div>
+    ))
+  }
+</div>

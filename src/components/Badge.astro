@@ -1,0 +1,10 @@
+---
+export type Props = {
+  value: string;
+  color: string;
+};
+
+const { color, value } = Astro.props;
+---
+
+<span class:list={[color, "px-2 py-0.5 text-sm rounded-sm"]}>{value}</span>

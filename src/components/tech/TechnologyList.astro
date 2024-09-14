@@ -1,0 +1,18 @@
+---
+import Badge, { type Props as BadgeProps } from "../Badge.astro";
+import { getColorByType, getOrderedTechList } from "./tech";
+
+type Props = {
+  technologies: BadgeProps["value"][];
+};
+
+const { technologies } = Astro.props;
+---
+
+<div class="flex flex-row flex-wrap gap-1">
+  {
+    getOrderedTechList(technologies).map((value) => (
+      <Badge value={value} color={getColorByType(value)} />
+    ))
+  }
+</div>

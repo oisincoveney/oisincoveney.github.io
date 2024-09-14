@@ -1,0 +1,58 @@
+---
+import { Icon } from "astro-icon/components";
+import { theme } from "../../store.ts";
+---
+
+<div
+  class="bg-button text-text-button absolute bottom-6 left-8 flex flex-row gap-4 rounded-xl px-4 py-2"
+>
+  <button
+    id="switch"
+    data-theme="light"
+    class="grid h-6 w-6 place-items-center rounded-lg"
+  >
+    <Icon name="carbon:light" />
+  </button>
+  <button
+    id="switch"
+    data-theme="sunset"
+    class="grid h-6 w-6 place-items-center rounded-lg"
+  >
+    <Icon name="carbon:sunset" />
+  </button>
+  <button
+    id="switch"
+    data-theme="dark"
+    class="grid h-6 w-6 place-items-center rounded-lg"
+  >
+    <Icon name="carbon:moon" />
+  </button>
+</div>
+
+<script>
+  import { theme, initTheme, setNextTheme } from "../../store.ts";
+
+  // Initialize theme on page load
+  initTheme();
+
+  // Update data-theme attribute when theme changes
+  theme.subscribe((value) => {
+    document.documentElement.setAttribute("data-theme", value);
+    document.querySelectorAll("[data-theme]").forEach((elem) => {
+      if (elem.getAttribute("data-theme") === value) {
+        elem.classList.add("bg-primary-dark");
+        elem.classList.add("text-button");
+      } else {
+        elem.classList.remove("bg-primary-dark");
+        elem.classList.remove("text-button");
+      }
+    });
+  });
+
+  // Add event listener to the switch button
+  document.querySelectorAll("[data-theme]").forEach((elem) => {
+    elem.addEventListener("click", () =>
+      setNextTheme(elem.getAttribute("data-theme")),
+    );
+  });
+</script>

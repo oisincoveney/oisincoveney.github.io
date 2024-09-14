@@ -1,0 +1,23 @@
+---
+import ResumeSection from "./ResumeSection.astro";
+import { type ResumeValue } from "../../data/resume";
+
+type Props = {
+  sectionName: string;
+  data: ResumeValue;
+};
+
+const { sectionName, data } = Astro.props;
+---
+
+<section
+  data-section-name={sectionName}
+  class="resume-section relative flex flex-col gap-2"
+>
+  <a name={sectionName} class="absolute -top-20"></a>
+
+  <a class="section-name-anchor text-3xl font-black capitalize">{sectionName}</a
+  >
+  <hr />
+  {data.map((props) => <ResumeSection {...props} />)}
+</section>

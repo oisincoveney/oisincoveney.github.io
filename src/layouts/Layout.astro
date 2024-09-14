@@ -1,50 +1,54 @@
 ---
-interface Props {
-	title: string;
-}
+import { AstroFont } from "astro-font";
+import { getTheme } from "../store.ts";
+import ThemeSwitcher from "../components/theme/ThemeSwitcher.astro";
+export type Props = {
+  title: string;
+};
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" class="transition ease-in-out">
+  <head>
+    <AstroFont
+      config={[
+        {
+          src: [],
+          name: "Karla",
+          googleFontsURL:
+            "https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800",
+          preload: true,
+          display: "swap",
+          selector: "body",
+          fallback: "sans-serif",
+        },
+      ]}
+    />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script is:inline define:vars={{ defaultTheme: getTheme() }}>
+      function getInitialTheme() {
+        const storedTheme = localStorage.getItem("theme");
+        return storedTheme || defaultTheme;
+      }
+      document.documentElement.setAttribute("data-theme", getInitialTheme());
+    </script>
+  </head>
+  <body
+    class={`relative w-screen h-screen text-light bg-primary-dark transition overflow-hidden`}
+  >
+    <div class="h-full w-full overflow-auto">
+      <slot />
+    </div>
+
+    <ThemeSwitcher />
+
+    
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>

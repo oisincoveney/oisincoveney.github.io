@@ -1,0 +1,24 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout, { type Props as LayoutProps } from "./Layout.astro";
+
+type Props = LayoutProps;
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <nav class="flex w-full flex-row justify-between px-4 py-4 bg-nav-primary/90">
+    <div class="group flex flex-row items-center gap-2">
+      <Icon name="carbon:chevron-left" />
+      <a
+        href="/"
+        class="transition-all ease-in-out group-hover:underline group-hover:underline-offset-4"
+      >
+        Back to <span class="font-black">Home</span>
+      </a>
+    </div>
+  </nav>
+
+  <slot />
+</Layout>
