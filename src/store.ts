@@ -15,7 +15,7 @@ export const getTheme = () => {
 
 export const theme = atom(getTheme());
 
-export function setNextTheme(t) {
+export function setNextTheme(t: string) {
   theme.set(t);
   if (typeof window !== 'undefined') {
     localStorage.setItem('theme', t);
