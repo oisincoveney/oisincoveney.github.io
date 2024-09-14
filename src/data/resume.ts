@@ -237,11 +237,13 @@ const educationData: ResumeValue = [
     fromDate: new Date("May 2019"),
     toDate: new Date("January 2019"),
     location: "Dublin, Ireland",
-    items: [ {
-      description: [
-        "Data Science in Python: Data analysis of Citibike usage within the New York Metro Area",
-      ],
-    },],
+    items: [
+      {
+        description: [
+          "Data Science in Python: Data analysis of Citibike usage within the New York Metro Area",
+        ],
+      },
+    ],
   },
   {
     title: "Community College • General Education Courses",
@@ -249,9 +251,11 @@ const educationData: ResumeValue = [
     fromDate: new Date("January 2017"),
     toDate: new Date("December 2018"),
     location: "Dublin, Ireland",
-    items: [{
-      description: ["Men's Soccer: CCCAA Conference Champions"],
-    }],
+    items: [
+      {
+        description: ["Men's Soccer: CCCAA Conference Champions"],
+      },
+    ],
   },
   {
     title: "Bachelors of Science, Computer Science • Transferred",
@@ -263,17 +267,42 @@ const educationData: ResumeValue = [
   },
 ];
 
-const projectData: ResumeValue = [{
-  companyName: "Last Man Standing",
-  title: "In progress",
-  technologies: ["Typescript", "SvelteKit", "NestJS", "Prisma", "ShadCN", "Supabase", "Postgres"],
-  items: [{
-    description: [
-      "Multiplayer game that lets players engage in betting competitions based on the results of professional football games",
-      "Pulls current data Livescore API for each league and assigns points to each player based on their predictions.",
-    ]
-  }],
-}];
+const projectData: ResumeValue = [
+  {
+    companyName: "Last Man Standing",
+    title: "In progress",
+    technologies: [
+      "Typescript",
+      "SvelteKit",
+      "NestJS",
+      "Prisma",
+      "ShadCN",
+      "Supabase",
+      "Postgres",
+    ],
+    items: [
+      {
+        description: [
+          "Multiplayer game that lets players engage in betting competitions based on the results of professional football games",
+          "Pulls current data Livescore API for each league and assigns points to each player based on their predictions.",
+        ],
+      },
+    ],
+  },
+  {
+    companyName: "oisin.ee (this website!)",
+    title: "Continuously in progress",
+    technologies: ["Astro", "Typescript", "Github Actions"],
+    items: [
+      {
+        description: [
+          "A small Astro website with my resume and links to my socials.",
+          "Will add photos, about section, and other things when I have time",
+        ],
+      },
+    ],
+  },
+];
 
 export const RESUME = {
   experience: resumeData,

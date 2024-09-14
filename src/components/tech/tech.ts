@@ -9,7 +9,7 @@ export const techMap: [string[], { type: string; color: string }][] = [
       },
     ],
     [
-      ["React", "Vue.js", "jQuery", "Svelte", "Sveltekit", "Angular"],
+      ["React", "Astro", "Vue.js", "jQuery", "Svelte", "Sveltekit", "Angular"],
       {
         type: "FE Framework",
         color: "bg-tech-fe-framework",
@@ -37,7 +37,7 @@ export const techMap: [string[], { type: string; color: string }][] = [
       },
     ],
     [
-      ["git", "ANTLR", "Datadog", "Splunk", "Artifactory"],
+      ["git", "ANTLR", "Datadog", "Splunk", "Artifactory", "Github Actions"],
       {
         type: "Dev Tools",
         color: "bg-tech-dev",
