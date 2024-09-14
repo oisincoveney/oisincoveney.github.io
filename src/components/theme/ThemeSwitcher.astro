@@ -51,8 +51,10 @@ import { Icon } from "astro-icon/components";
   // Add event listener to the switch button
   document.querySelectorAll("[data-theme]").forEach((elem) => {
     elem.addEventListener("click", () => {
-      if (elem.getAttribute("data-theme"))
-        setNextTheme(elem.getAttribute("data-theme"));
+      const themeString = elem.getAttribute("data-theme");
+      if (themeString) {
+        setNextTheme(themeString);
+      }
     });
   });
 </script>
