@@ -1,15 +1,14 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import vue from '@astrojs/vue';
+import vue from "@astrojs/vue";
 
-import tailwind from '@astrojs/tailwind';
+import tailwind from "@astrojs/tailwind";
 
-
-import icon from 'astro-icon';
-
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [vue(), tailwind(), icon()]
+  integrations: [vue(), tailwind(), icon()],
+  site: "https://oisincoveney.github.io",
 });
