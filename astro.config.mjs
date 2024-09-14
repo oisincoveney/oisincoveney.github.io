@@ -10,5 +10,5 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   integrations: [vue(), tailwind(), icon()],
-  site: "https://oisincoveney.github.io",
+  site: "https://oisin.ee",
 });
